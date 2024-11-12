@@ -15,7 +15,7 @@ body {
 }
 
 .logo img {
-    width: 160px; /* Adjust to make it smaller */
+    width: 210px; /* Adjust to make it smaller */
     height: auto; /* Maintains aspect ratio */
 }
 
@@ -24,8 +24,8 @@ body {
     background-color: #fbbd3f; /* Yellow background for the DOB box */
     padding: 30px;
     border-radius: 20px;
-    width: 120%;
-    max-width: 400px;
+    width:80%;
+    max-width: 660px;
 }
 
 .dob-box h2 {
