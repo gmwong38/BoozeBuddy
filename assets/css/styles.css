@@ -1,3 +1,4 @@
+/* Login background */
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -76,7 +77,7 @@ body {
 
 /* Error message container */
 .error-message {
-    background-color: #f268ed;
+    background-color: #a655a4;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -93,7 +94,7 @@ body {
 
 /* Error GIF */
 .error-message img {
-    width: 100%;s
+    width: 100%;
     max-width: 300px;
     height: auto;
 }
