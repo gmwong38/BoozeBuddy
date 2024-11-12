@@ -1,2 +1,2 @@
-# BZBG
+# BoozeBuddy
 GM's techup project
