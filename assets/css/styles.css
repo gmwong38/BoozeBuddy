@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1e1e2e; /* Purple background */
+    margin: 0;
+}
+
+.logo {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.logo img {
+    width: 160px; /* Adjust to make it smaller */
+    height: auto; /* Maintains aspect ratio */
+}
+
+.container {
+    text-align: center;
+    background-color: #fbbd3f; /* Yellow background for the DOB box */
+    padding: 30px;
+    border-radius: 20px;
+    width: 120%;
+    max-width: 400px;
+}
+
+.dob-box h2 {
+    font-size: 30px;
+    color: #333;
+    margin-bottom: 60px;
+}
+
+.dob-input {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+    border: none;
+    border-bottom: 2px solid #333;
+    background: none;
+    outline: none;
+}
+
+.enter-btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.enter-btn:hover {
+    background-color: #555;
+}
