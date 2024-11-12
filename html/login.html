@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Date of Birth Input Page</title>
     <link rel="stylesheet" href="../assets/css/styles.css">
+    <!-- Link to the external JavaScript file -->
+    <script src="../scripts/validateDOB.js" defer></script>
 </head>
 <body>
     <div class="logo">
@@ -13,8 +15,9 @@
     <div class="container">
         <div class="dob-box">
             <h2>Enter your date of birth</h2>
-            <form action="../html/mainpage.html">
-                <input type="text" placeholder="DD / MM / YYYY" class="dob-input">
+            <form onsubmit="validateDOB(event)" action="../html/mainpage.html">
+                <!-- Date input field with a calendar picker -->
+                <input type="date" class="dob-input" required>
                 <button type="submit" class="enter-btn">Enter</button>
             </form>
         </div>
