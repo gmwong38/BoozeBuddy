@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BoozeBuddy</title>
+    <link rel="stylesheet" href="../assets//css/mainpage.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Row 1 -->
+        <div class="row">
+            <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Logo"></div>
+            <div><p class="white-text">Description of BoozeBuddy app.</p></div>
+        </div>
+
+        <!-- Row 2 to 5 (Repeating Structure) -->
+        <div class="row">
+            <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
+            <div><p class="yellow-text">Your alcohol preference: </p></div>
+            <div>
+                <input type="text" id="search1" placeholder="Search here..." list="alcoholList" oninput="filterSuggestions('search1', 'alcoholList')">
+                <datalist id="alcoholList">
+                    <!-- Options will be dynamically added here -->
+                </datalist>
+            </div>
+            <div id="selectedPreferences">
+                <!-- Selected options will be displayed here -->
+            </div>
+        </div>                   
+        
+        <div class="row">
+            <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
+            <div><p class="yellow-text">Your preferred flavour profile</p></div>
+            <div>
+                <input type="text" id="search2" placeholder="Search here..." oninput="saveChoice('row3', this.value)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
+            <div><p class="blue-text">Your preferred drink style</p></div>
+            <div>
+                <input type="text" id="search3" placeholder="Search here..." oninput="saveChoice('row4', this.value)">
+            </div>
+        </div>
+
+        <div class="row">
+            <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
+            <div><p class="red-text">Your calorie preference</p></div>
+            <div>
+                <input type="text" id="search4" placeholder="Search here..." oninput="saveChoice('row5', this.value)">
+            </div>
+        </div>
+
+        <!-- Button to send data -->
+        <div class="button-container">
+            <button onclick="sendData()">Send Choices</button>
+        </div>
+    </div>
+
+    <script src="../scripts/datalist.js"></script>
+    <script src="../scripts/getChoices.js"></script>
+
+</body>
+</html>

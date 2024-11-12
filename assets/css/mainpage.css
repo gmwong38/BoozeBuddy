@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1e1e2e; /* Set background color to purple */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Full viewport height */
+    text-align: left; /* Left-align text inside elements */
+}
+
+.container {
+    width: 80%; /* Set the container width, you can adjust as needed */
+    max-width: 1000px; /* Max width to prevent it from becoming too wide */
+    padding: 20px;
+    background-color: #1e1e2e; /* White background for the container to contrast with purple */
+    border-radius: 10px; /* Optional: Rounded corners for the container */
+}
+
+.row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    justify-content: flex-start; /* Align the row content to the left */
+}
+
+.row img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+}
+
+.row div {
+    margin-right: 10px;
+}
+
+select, input {
+    width: 200px;
+    padding: 5px;
+}
+
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+}
+
+.yellow-text {
+    color: yellow;
+}
+
+.blue-text {
+    color: blue;
+}
+
+.red-text {
+    color: red;
+}
+
+.white-text {
+    color: white;
+}
