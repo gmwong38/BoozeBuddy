@@ -93,3 +93,43 @@ select, input {
 .slider-labels span {
     color: white;
 }
+
+/* Styling the grid boxes */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 20px; /* Space between boxes */
+    margin-top: 10px;
+}
+
+.grid-box {
+    background-color: #f5f5f5; /* Light background for the boxes */
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Smooth hover effect */
+}
+
+.grid-box h3 {
+    font-size: 1.2em;
+    color: #333; /* Darker color for headers */
+    margin: 0;
+}
+
+.grid-box p {
+    font-size: 0.9em;
+    color: #666; /* Subdued color for descriptions */
+    margin: 8px 0 0;
+}
+
+.grid-box:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+    cursor: pointer;
+}
+
+/* Style for selected box */
+.grid-box.selected {
+    background-color: yellow; /* Highlight the selected box */
+    box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6); /* Stronger shadow for the selected box */
+}

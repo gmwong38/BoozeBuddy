@@ -138,3 +138,13 @@ function updateCaloriePreference(value) {
     document.getElementById("calorieDisplay").textContent = "Selected: " + preference;
     // saveChoice('row5', preference);
 }
+
+document.querySelectorAll('.grid-box').forEach(box => {
+    box.addEventListener('click', function() {
+        // Toggle the selected class to highlight the box
+        this.classList.toggle('selected');
+        
+        const selectedProfile = this.querySelector('h3').textContent;
+        // saveChoice('row4', selectedProfile);
+    });
+});
