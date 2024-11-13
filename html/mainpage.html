@@ -20,12 +20,12 @@
             <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
             <div><p class="yellow-text">Your alcohol preference: </p></div>
             <div>
-                <input type="text" id="search1" placeholder="Search here..." list="alcoholList" oninput="filterSuggestions('search1', 'alcoholList')">
+                <input type="text" id="search1" placeholder="Search here..." list="alcoholList" oninput="filterSuggestions('search1', 'alcoholList', 'alcoholOptions')">
                 <datalist id="alcoholList">
                     <!-- Options will be dynamically added here -->
                 </datalist>
             </div>
-            <div id="selectedPreferences">
+            <div id="selectedPreferences" class="white-text">
                 <!-- Selected options will be displayed here -->
             </div>
         </div>                   
@@ -34,7 +34,7 @@
             <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
             <div><p class="yellow-text">Your preferred flavour profile</p></div>
             <div>
-                <input type="text" id="search2" placeholder="Search here..." oninput="saveChoice('row3', this.value)">
+                <input type="text" id="search3" placeholder="Search here..." oninput="saveChoice('row4', this.value)">
             </div>
         </div>
 
@@ -42,7 +42,13 @@
             <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
             <div><p class="blue-text">Your preferred drink style</p></div>
             <div>
-                <input type="text" id="search3" placeholder="Search here..." oninput="saveChoice('row4', this.value)">
+                <input type="text" id="search2" placeholder="Search here..." list="styleList" oninput="filterSuggestions('search2', 'styleList', 'styleOptions')">
+                <datalist id="styleList">
+                    <!-- Options will be dynamically added here -->
+                </datalist>
+            </div>
+            <div id="selectedStyles" class="white-text">
+                <!-- Selected options will be displayed here -->
             </div>
         </div>
 
@@ -50,7 +56,18 @@
             <div><img src="https://www.icegif.com/wp-content/uploads/2023/04/icegif-1436.gif" alt="Image"></div>
             <div><p class="red-text">Your calorie preference</p></div>
             <div>
-                <input type="text" id="search4" placeholder="Search here..." oninput="saveChoice('row5', this.value)">
+                <!-- Slider for selecting calorie preference -->
+                <input type="range" id="calorieSlider" min="1" max="3" step="1" oninput="updateCaloriePreference(this.value)" class="white-slider">
+                
+                <!-- Labels for slider values in white text -->
+                <div class="slider-labels">
+                    <span>Low</span>
+                    <span style="margin-left: 40px;">Medium</span>
+                    <span style="margin-left: 40px;">Indulgent</span>
+                </div>
+        
+                <!-- Display the selected value -->
+                <p id="calorieDisplay" class="white-text">Selected: Low</p>
             </div>
         </div>
 
