@@ -5,7 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1e1e2e; /* Purple background */
+    background-color: #262637; /* Purple background */
     margin: 0;
 }
 
@@ -22,7 +22,7 @@ body {
 
 .container {
     text-align: center;
-    background-color: #fbbd3f; /* Yellow background for the DOB box */
+    background-color: #FBBA47; /* Yellow background for the DOB box */
     padding: 30px;
     border-radius: 20px;
     width:80%;
@@ -31,7 +31,7 @@ body {
 
 .dob-box h2 {
     font-size: 30px;
-    color: #333;
+    color: #262637;
     margin-bottom: 60px;
 }
 
@@ -41,7 +41,7 @@ body {
     font-size: 18px;
     text-align: center;
     border: none;
-    border-bottom: 2px solid #333;
+    border-bottom: 2px solid #262637;
     background: none;
     outline: none;
 }
@@ -49,7 +49,7 @@ body {
 .enter-btn {
     margin-top: 20px;
     padding: 10px 20px;
-    background-color: #333;
+    background-color: #262637;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -58,7 +58,7 @@ body {
 }
 
 .enter-btn:hover {
-    background-color: #555;
+    background-color: #262637;
 }
 
 /* Modal background */
@@ -77,7 +77,7 @@ body {
 
 /* Error message container */
 .error-message {
-    background-color: #a655a4;
+    background-color: #ffffff;
     padding: 20px;
     text-align: center;
     border-radius: 10px;
@@ -101,8 +101,8 @@ body {
 
 /* Close button */
 .close-btn {
-    background-color: #333;
-    color: #aa0d0d;
+    background-color: #262637;
+    color: #CE2F6E;
     border: none;
     padding: 10px 20px;
     border-radius: 5px;

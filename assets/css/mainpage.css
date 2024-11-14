@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1e1e2e; /* Set background color to purple */
+    background-color: #262637; /* Set background color to purple */
     display: flex;
     justify-content: center; /* Horizontally center content */
     align-items: center; /* Vertically center content */
@@ -14,7 +14,7 @@ body {
     width: 80%; /* Set the container width, you can adjust as needed */
     max-width: 1000px; /* Max width to prevent it from becoming too wide */
     padding: 20px;
-    background-color: #1e1e2e; /* White background for the container to contrast with purple */
+    background-color: #262637; /* White background for the container to contrast with purple */
     border-radius: 10px; /* Optional: Rounded corners for the container */
 }
 
@@ -48,15 +48,15 @@ select, input {
 }
 
 .yellow-text {
-    color: yellow;
+    color: #FBBA47;
 }
 
 .blue-text {
-    color: blue;
+    color: #2B95A6;
 }
 
 .red-text {
-    color: red;
+    color: #CE2F6E;
 }
 
 .white-text {
@@ -130,6 +130,6 @@ select, input {
 
 /* Style for selected box */
 .grid-box.selected {
-    background-color: yellow; /* Highlight the selected box */
+    background-color: #FBBA47; /* Highlight the selected box */
     box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6); /* Stronger shadow for the selected box */
 }
