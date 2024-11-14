@@ -188,4 +188,53 @@ function sendData() {
 
     // Log the data or send it to a server as needed
     console.log("Sending the following data:", JSON.stringify(selectionData));
+
+    // After the data is sent, display random alcohol images on the next page
+    displayRandomAlcoholImages(alcoholData);
+}
+
+function sendData() {
+    console.log("Button clicked!");
+    // Gather selected alcohol preferences
+    const alcoholData = selectedPreferences;
+
+    // Gather selected flavor profile (those with 'selected' class)
+    const flavorData = [];
+    document.querySelectorAll('.grid-box.selected').forEach(box => {
+        flavorData.push(box.querySelector('h3').textContent);
+    });
+
+    // Gather selected drink styles
+    const styleData = selectedStyles;
+
+    // Gather selected calorie preference
+    const caloriePreference = document.getElementById("calorieDisplay").textContent.replace("Selected: ", "");
+
+    // Create the JSON object
+    const selectionData = {
+        alcoholPreferences: alcoholData,
+        flavorProfile: flavorData,
+        drinkStyles: styleData,
+        caloriePreference: caloriePreference
+    };
+    
+    // Store the selection data in localStorage
+    localStorage.clear(); 
+    localStorage.setItem("selectionData", JSON.stringify(selectionData));
+
+    // Convert the selection data to a string for displaying in the dialog
+    let dialogText = "Selected Choices:\n\n";
+    dialogText += `Alcohol Preferences: ${alcoholData.join(", ") || "No preference"}\n`;
+    dialogText += `Flavor Profile: ${flavorData.join(", ") || "No preference"}\n`;
+    dialogText += `Drink Styles: ${styleData.join(", ") || "No preference"}\n`;
+    dialogText += `Calorie Preference: ${caloriePreference || "No preference"}`;
+
+    // Show a dialog with the selected choices
+    alert(dialogText);
+
+    // Log the data or send it to a server as needed
+    console.log("Sending the following data:", JSON.stringify(selectionData));
+
+    // Redirect to the next page
+    window.location.href = "recommendation.html";
 }
