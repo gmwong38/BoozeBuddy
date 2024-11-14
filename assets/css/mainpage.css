@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin: 0;
     padding: 0;
     background-color: #262637; /* Set background color to purple */
@@ -10,6 +12,13 @@ body {
     text-align: left; /* Left-align text inside elements */
 }
 
+.large-text {
+    font-size: 1.5em; /* Adjust this value as needed */
+}
+
+.bold-text {
+    font-weight: bold;
+}
 .container {
     width: 80%; /* Set the container width, you can adjust as needed */
     max-width: 1000px; /* Max width to prevent it from becoming too wide */
@@ -49,14 +58,17 @@ select, input {
 
 .yellow-text {
     color: #FBBA47;
+    font-weight: bold;
 }
 
 .blue-text {
     color: #2B95A6;
+    font-weight: bold;
 }
 
 .red-text {
     color: #CE2F6E;
+    font-weight: bold;
 }
 
 .white-text {
@@ -79,7 +91,7 @@ select, input {
     appearance: none;
     width: 20px;
     height: 20px;
-    background-color: #ff0000; /* Color of the thumb (adjust as desired) */
+    background-color: #CE2F6E; /* Color of the thumb (adjust as desired) */
     cursor: pointer;
     border-radius: 50%; /* Rounded thumb */
 }

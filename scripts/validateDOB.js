@@ -22,7 +22,7 @@ function validateDOB(event) {
         
         const errorContent = `
             <div class="error-message">
-                <p>You must be at least 18 years old to proceed.</p>
+                <p class="bold-text">You must be at least 18 years old to proceed.</p>
                 <img src="https://media.tenor.com/FVvN-n6Z028AAAAM/apt-ros%C3%A9.gif" alt="Error GIF" />
                 <button class="close-btn">Close</button>
             </div>
