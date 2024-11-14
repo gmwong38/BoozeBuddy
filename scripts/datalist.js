@@ -16,10 +16,8 @@ function filterSuggestions(inputId, listId, options) {
 
     datalist.innerHTML = ""; // Clear current options
 
-    // If no query, show all options; otherwise, filter options
-    const filteredOptions = query ? 
-        options.filter(item => item.toLowerCase().includes(query)) : 
-        options;
+    // If the input is empty, show all options; otherwise, filter options
+    const filteredOptions = query === "" ? options : options.filter(item => item.toLowerCase().includes(query));
 
     // Add options to the datalist
     filteredOptions.forEach(filteredItem => {
@@ -114,8 +112,10 @@ document.getElementById("search1").addEventListener("change", function () {
     if (alcoholOptions.includes(selectedValue)) {
         handleAlcoholSelection(selectedValue);
         this.value = ''; // Clear input field after selection
+        filterSuggestions('search1', 'alcoholList', alcoholOptions); // Show all options again
     }
 });
+
 
 document.getElementById("search2").addEventListener("change", function () {
     const selectedValue = this.value;
@@ -148,3 +148,44 @@ document.querySelectorAll('.grid-box').forEach(box => {
         // saveChoice('row4', selectedProfile);
     });
 });
+
+document.getElementById('sendButton').addEventListener('click', sendData);
+
+function sendData() {
+    console.log("Button clicked!");
+    // Gather selected alcohol preferences
+    const alcoholData = selectedPreferences;
+
+    // Gather selected flavor profile (those with 'selected' class)
+    const flavorData = [];
+    document.querySelectorAll('.grid-box.selected').forEach(box => {
+        flavorData.push(box.querySelector('h3').textContent);
+    });
+
+    // Gather selected drink styles
+    const styleData = selectedStyles;
+
+    // Gather selected calorie preference
+    const caloriePreference = document.getElementById("calorieDisplay").textContent.replace("Selected: ", "");
+
+    // Create the JSON object
+    const selectionData = {
+        alcoholPreferences: alcoholData,
+        flavorProfile: flavorData,
+        drinkStyles: styleData,
+        caloriePreference: caloriePreference
+    };
+
+    // Convert the selection data to a string for displaying in the dialog
+    let dialogText = "Selected Choices:\n\n";
+    dialogText += `Alcohol Preferences: ${alcoholData.join(", ") || "None"}\n`;
+    dialogText += `Flavor Profile: ${flavorData.join(", ") || "None"}\n`;
+    dialogText += `Drink Styles: ${styleData.join(", ") || "None"}\n`;
+    dialogText += `Calorie Preference: ${caloriePreference || "None"}`;
+
+    // Show a dialog with the selected choices
+    alert(dialogText);
+
+    // Log the data or send it to a server as needed
+    console.log("Sending the following data:", JSON.stringify(selectionData));
+}

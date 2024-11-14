@@ -3,36 +3,12 @@
 /* Base styles for the box-container */
 .box-container {
     position: relative; /* For positioning the flashing text */
-    border: 2px solid #0e182b; /* Add a border */
+    border: 2px solid #262637; /* Add a border */
     padding: 10px; /* Add padding inside the box */
     border-radius: 20px; /* Optional: rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: shadow for a subtle 3D effect */
     margin: 20px 0; /* Optional: margin around the box */
-    background-color: #0e182b; /* Optional: white background color */
+    background-color: #262637; /* Optional: white background color */
     overflow: hidden; /* Prevent text from overflowing */
-}
-
-/* Flashing text animation */
-.box-container:hover .row p {
-    animation: flashText 1s infinite; /* Apply animation to text inside <p> */
-}
-
-/* Flash text keyframes */
-@keyframes flashText {
-    0% {
-        opacity: 1;
-    }
-    50% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
-}
-
-/* Optional: Make sure text inside the box doesn't overlap */
-.row p {
-    margin: 0;
 }
 
 body {
@@ -179,4 +155,21 @@ select, input {
 .grid-box.selected {
     background-color: #FBBA47; /* Highlight the selected box */
     box-shadow: 0 4px 12px rgba(255, 204, 0, 0.6); /* Stronger shadow for the selected box */
+}
+
+.shiny-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
+    border: none;
+    padding: 15px 32px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.shiny-button:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7); /* Glowing effect */
+    transform: scale(1.1); /* Slightly increase the size of the button */
 }
