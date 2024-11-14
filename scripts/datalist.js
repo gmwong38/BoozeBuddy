@@ -1,5 +1,5 @@
 const alcoholOptions = [
-    "Vodka", "Gin", "Tequila", "Rum", "Whiskey", "Brandy", "Cognac", "Wine", "Beer", "Sake", "Soju", "Non-Alcoholic"
+    "Vodka", "Gin", "Tequila", "Rum", "Whiskey", "Brandy", "Wine", "Sake", "Soju", "Non-Alcoholic"
 ];
 const styleOptions = [
     "Classic", "Trendy", "Experimental", "Refreshing"
