@@ -178,10 +178,10 @@ function sendData() {
 
     // Convert the selection data to a string for displaying in the dialog
     let dialogText = "Selected Choices:\n\n";
-    dialogText += `Alcohol Preferences: ${alcoholData.join(", ") || "None"}\n`;
-    dialogText += `Flavor Profile: ${flavorData.join(", ") || "None"}\n`;
-    dialogText += `Drink Styles: ${styleData.join(", ") || "None"}\n`;
-    dialogText += `Calorie Preference: ${caloriePreference || "None"}`;
+    dialogText += `Alcohol Preferences: ${alcoholData.join(", ") || "No preference"}\n`;
+    dialogText += `Flavor Profile: ${flavorData.join(", ") || "No preference"}\n`;
+    dialogText += `Drink Styles: ${styleData.join(", ") || "No preference"}\n`;
+    dialogText += `Calorie Preference: ${caloriePreference || "No preference"}`;
 
     // Show a dialog with the selected choices
     alert(dialogText);

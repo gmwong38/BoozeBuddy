@@ -48,19 +48,27 @@ body {
     outline: none;
 }
 
-.enter-btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #262637;
-    color: #fff;
+.shiny-button {
+    background-color: #4CAF50; /* Green background */
+    color: white; /* White text */
     border: none;
-    border-radius: 5px;
+    padding: 15px 32px;
+    text-align: center;
     font-size: 16px;
     cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); /* Light shadow by default */
+    margin-top: 30px; /* Adds gap from the top */
 }
 
-.enter-btn:hover {
-    background-color: #262637;
+.shiny-button:hover {
+    box-shadow: 0 0 15px 5px rgba(255, 255, 255, 0.7); /* Glowing effect */
+    transform: scale(1.1); /* Slightly increase the size of the button */
+}
+
+.shiny-button:focus {
+    outline: none; /* Remove default outline on focus */
 }
 
 /* Modal background */
