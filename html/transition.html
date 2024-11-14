@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Transition Page</title>
+  <style>
+    /* Make the body and html take up the full height */
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden; /* Hide scrollbars */
+    }
+
+    /* Style the image to cover the full page */
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Ensure the image covers the entire page */
+    }
+
+    /* Flashing text style */
+    p {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      font-size: 36px; /* Larger font size */
+      font-weight: bold;
+      z-index: 10; /* Ensure text is above the image */
+      animation: flash 1s infinite; /* Flashing animation */
+    }
+
+    /* Flashing animation keyframes */
+    @keyframes flash {
+      0% { opacity: 1; }
+      50% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Display the full-page GIF -->
+  <img src="https://media4.giphy.com/media/ssTVsNFOBHNAc/giphy.webp?cid=790b761182240wutxev7rfpxq7lkbsnz3m6czsoiaeiuwqhq&ep=v1_gifs_search&rid=giphy.webp&ct=g" alt="Loading GIF" />
+
+  <!-- Centered flashing text message -->
+  <p>Redirecting... Please wait...</p>
+
+  <script>
+    // After 5 seconds, redirect to recommendation.html
+    setTimeout(function() {
+      window.location.href = "recommendation.html";
+    }, 5000); // 5000 milliseconds = 5 seconds
+  </script>
+</body>
+</html>
+s

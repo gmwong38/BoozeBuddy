@@ -235,6 +235,6 @@ function sendData() {
     // Log the data or send it to a server as needed
     console.log("Sending the following data:", JSON.stringify(selectionData));
 
-    // Redirect to the next page
-    window.location.href = "recommendation.html";
+    // Redirect to transition.html
+    window.location.href = "transition.html";
 }
