@@ -1,5 +1,4 @@
-{
-    "Sheet1":[
+const cocktails = [
      {
       "alcoholPreferences": "Gin",
       "Name": "gin1",
@@ -960,5 +959,6 @@
       "flavorProfile": "Sour, Fruity",
       "Location": "\/assets\/alcoholImages\/whiskey\/whiskey8.png"
      }
-    ]
-    }
+];
+
+window.global_cocktails = cocktails;
