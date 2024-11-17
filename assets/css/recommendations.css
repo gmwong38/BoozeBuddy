@@ -1,3 +1,57 @@
+html {
+  scroll-behavior: auto;
+}
+
+/* Style for the header */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 100px; 
+  color: white;
+}
+
+.logo img {
+  height: 180px;
+  width: auto;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+/* Container for the button */
+.back-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+  padding-right: 35px;
+}
+
+/* Style for the back button */
+.back-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: white; 
+  color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+  background-color: #262637;
+}
+
 #cocktailContainer {
   display: flex;
   flex-wrap: wrap;
@@ -11,15 +65,14 @@
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  align-items: stretch; /* Ensures the content stretches across the container */
-  border: 1px solid #ccc;
+  align-items: stretch;
+  border: 1px solid white;
   border-radius: 8px;
   padding: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  background-color: #ffffff;
+  background-color: white;
   min-height: 450px;
-  display: flex;
-  justify-content: space-between; /* Ensures the details are spaced out evenly */
+  justify-content: space-between;
 }
 
 .cocktail img {
@@ -33,33 +86,45 @@
 .cocktail-details {
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Ensures each detail takes equal space */
+  justify-content: space-between;
   flex: 1;
   padding-top: 8px;
-  height: 100%; /* Makes sure it fills available space */
+  height: 100%;
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 16px;
 }
 
-.cocktail h2 {
-  margin: 8px 0 16px 0; /* Add margin-bottom to create space between name and description */
-  font-size: 1.5em;
-  text-align: left;
+.cocktail-details h2 {
+  text-align: center;
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.cocktail p {
+.cocktail-details p {
   margin: 4px 0;
   text-align: left;
 }
 
 .cocktail .alcohol-and-kcal {
   display: flex;
-  gap: 8px;
   align-items: center;
+  gap: 8px;
   margin-bottom: 12px;
 }
 
-.cocktail .alcohol-and-kcal .icon {
-  width: 20px;
-  height: 20px;
+.cocktail .alcohol-and-kcal .alcohol-icon {
+  color: #FBBA47;
+}
+
+.cocktail .alcohol-and-kcal .kcal-icon {
+  color: #CE2F6E;
+}
+
+.cocktail .alcohol-and-kcal span {
+  display: inline-block;
+  margin-right: 10px; 
 }
 
 .collapsible-content {
@@ -73,19 +138,22 @@
 }
 
 .toggle-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
+  background-color: white;
+  color: black;
+  border: 1px solid black;
   padding: 10px 20px;
   margin: 8px 0;
   cursor: pointer;
   border-radius: 4px;
   font-size: 16px;
   width: 100%;
+  transition: box-shadow 0.3s ease;
 }
 
 .toggle-button:hover {
-  background-color: #0056b3;
+  background-color: white;
+  border: 1px solid black;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .collapsible-content p {
@@ -99,33 +167,4 @@
   justify-content: flex-start;
   align-items: stretch;
   margin-bottom: 12px;
-}
-
-.cocktail-details {
-  background-color: #fafafa;
-  border-radius: 8px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-}
-
-.cocktail-details .toggle-button {
-  width: 100%;
-}
-
-.cocktail .cocktail-details {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.alcohol-and-kcal {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.alcohol-and-kcal .icon {
-  font-size: 1.2em;
-  color: #007bff;
 }

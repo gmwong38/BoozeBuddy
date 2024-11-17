@@ -54,10 +54,9 @@ filteredCocktails.forEach(cocktail => {
     return text.replace(/\n/g, "<br>");
   }
 
-  const alcoholIcon = `<i class="fas fa-wine-glass icon"></i> ${cocktail.alcoholPreferences}`;
-
-  const kcalIcon = `<i class="fas fa-calculator icon"></i> ${cocktail.Kcal} Kcal`;
-
+  const alcoholIcon = `<i class="fas fa-wine-glass alcohol-icon"></i> ${cocktail.alcoholPreferences}`;
+  const kcalIcon = `<i class="fas fa-calculator kcal-icon"></i> ${cocktail.Kcal} Kcal`;
+  
   cocktailElement.innerHTML = `
     <img src="${cocktail.location}" class="cocktail-image">
     <div class="cocktail-details">
@@ -66,17 +65,15 @@ filteredCocktails.forEach(cocktail => {
         <span>${alcoholIcon}</span>
         <span>${kcalIcon}</span>
       </div>
-      <p class="cocktail-description">${cocktail.description}</p>
-      <button class="toggle-button">Ingredients</button>
+        <p class="cocktail-description">${cocktail.description}</p>
+      <button class="toggle-button">How to make</button>
       <div class="collapsible-content">
-        <p>${formatTextWithLineBreaks(cocktail.ingredients)}</p>
-      </div>
-      <button class="toggle-button">Recipe</button>
-      <div class="collapsible-content">
-        <p>${formatTextWithLineBreaks(cocktail.recipe)}</p>
+        <p><strong>Ingredients<br></strong>${formatTextWithLineBreaks(cocktail.ingredients)}</p>
+        <p><strong>Recipe<br></strong>${formatTextWithLineBreaks(cocktail.recipe)}</p>
       </div>
     </div>
   `;
+  
 
   // Add event listeners for collapsible functionality
   const toggleButtons = cocktailElement.querySelectorAll('.toggle-button');
