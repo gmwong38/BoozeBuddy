@@ -28,6 +28,10 @@ function getFilteredCocktails(cocktails, storedPreferences) {
     });
   }
 
+  if (filteredCocktails.length < 3) {
+    filteredCocktails = cocktails;
+  }
+
   // If still more than 3, randomly pick 3
   while (filteredCocktails.length > 3) {
     filteredCocktails.splice(Math.floor(Math.random() * filteredCocktails.length), 1);
@@ -62,6 +66,7 @@ filteredCocktails.forEach(cocktail => {
     <div class="cocktail-details">
       <h2>${cocktail.cocktailName}</h2>
       <div class="alcohol-and-kcal">
+        <span></span>
         <span>${alcoholIcon}</span>
         <span>${kcalIcon}</span>
       </div>
