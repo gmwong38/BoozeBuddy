@@ -230,7 +230,7 @@ function sendData() {
     dialogText += `Calorie Preference: ${caloriePreference || "No preference"}`;
 
     // Show a dialog with the selected choices
-    alert(dialogText);
+    // alert(dialogText);
 
     // Log the data or send it to a server as needed
     console.log("Sending the following data:", JSON.stringify(selectionData));
