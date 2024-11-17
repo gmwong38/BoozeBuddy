@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+html {
+    scroll-behavior: auto;
+  }
+
 /* Base styles for the box-container */
 .box-container {
     position: relative; /* For positioning the flashing text */
@@ -23,6 +27,25 @@ body {
     text-align: left; /* Left-align text inside elements */
 }
 
+/* Styling for the header */
+.header {
+    display: flex;
+    justify-content: center;
+    width: device-width;  /* Ensure it spans the entire width of the page */
+    background-color: #262637; /* Optional: Set a background color */
+    margin: 0 auto; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+}
+
+.header-img {
+    width: 150%;   /* Makes the image fill the entire width of the row */
+    height: auto;  /* Maintain the aspect ratio */
+    display: block;  /* Ensures no space is left below the image */
+    object-fit: cover; 
+    width: device-width;
+}
+
+
 .large-text {
     font-size: 1.5em; /* Adjust this value as needed */
 }
@@ -42,22 +65,22 @@ body {
     display: flex;
     align-items: center;
     margin-bottom: 20px;
-    justify-content: flex-start; /* Align the row content to the left */
-}
-
-.row img {
-    width: 100px;
-    height: 100px;
-    object-fit: cover;
-    margin-right: 20px;
+    justify-content: center; 
+    width: 100%; 
 }
 
 .row div {
     margin-right: 10px;
+    color: white;
+}
+
+
+.bold-text {
+    font-weight: bold;
 }
 
 select, input {
-    width: 200px;
+    width: 500px;
     padding: 5px;
 }
 
@@ -65,6 +88,19 @@ select, input {
     margin-top: 20px;
     display: flex;
     justify-content: center; /* Center the button horizontally */
+}
+
+.description-header {
+    font-size: 1.5em; /* Adjust font size */
+    font-weight: bold; /* Make text bold */
+    margin-bottom: 10px; /* Space below the text */
+    text-align: center; /* Center the text horizontally */
+}
+
+.duckie-header {
+    font-size: 1.5em; /* Adjust font size */
+    margin-bottom: 10px; /* Space below the text */
+    text-align: center; /* Center the text horizontally */
 }
 
 .yellow-text {
@@ -107,7 +143,7 @@ select, input {
     border-radius: 50%; /* Rounded thumb */
 }
 .white-slider::-moz-range-thumb {
-    width: 20px;
+    width:300px;
     height: 20px;
     background-color: #d04bbf;
     cursor: pointer;

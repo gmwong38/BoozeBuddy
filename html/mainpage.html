@@ -9,17 +9,23 @@
 <body>
     <div class="container">
         <!-- Row 1 -->
-        <div class="box-container">
+        <div class="header">
             <div class="row">
-                <div><img src="../assets/images/logo.png" alt="Logo"></div>
-                <div><p class="white-text large-text"><span class="bold-text">Your Personal Bartender</span> <br> Find the perfect cocktail or mocktail that fits your <span class="yellow-text">taste</span>, <span class="blue-text">mood</span>, and <span class="red-text">lifestyle</span> with Boozebuddy’s AI-powered recommendations!</p></div>
+                <img src="/assets/images/mainBanner.jpg" alt="Main Banner" class="header-img">
             </div>
-        </div>               
-
+        </div>
+        <div>
+            <p class="white-text duckie-header">
+            Find the perfect cocktail or mocktail that fits your 
+            <span class="yellow-text bold-text">taste</span>, 
+            <span class="blue-text bold-text">mood</span>, and 
+            <span class="red-text bold-text">lifestyle</span> 
+            with Boozebuddy’s AI-powered recommendations!
+        </div>        
+        
         <!-- Row 2 to 5 (Repeating Structure) -->
+        <div><p class="yellow-text description-header">Your alcohol preference</p></div>
         <div class="row">
-            <div><img src="../assets/images/alcoholpreference.png"></div>
-            <div><p class="yellow-text">Your alcohol preference: </p></div>
             <div>
                 <input type="text" id="search1" placeholder="Search here..." list="alcoholList" oninput="filterSuggestions('search1', 'alcoholList', 'alcoholOptions')">
                 <datalist id="alcoholList">
@@ -31,9 +37,8 @@
             </div>
         </div>                   
         
+        <div><p class="yellow-text description-header">Your preferred flavour profile</p></div>
         <div class="row">
-            <div><img src="../assets/images/flavorprofile.png" alt="Image"></div>
-            <div><p class="yellow-text">Your preferred flavour profile</p></div>
             <div class="grid-container">
                 <div class="grid-box">
                     <h3>Fruity</h3>
@@ -74,9 +79,8 @@
             </div>
         </div>
 
+        <div><p class="blue-text description-header">Your preferred drink style</p></div>
         <div class="row">
-            <div><img src="../assets/images/drinkstyle.png" alt="Image"></div>
-            <div><p class="blue-text">Your preferred drink style</p></div>
             <div>
                 <input type="text" id="search2" placeholder="Search here..." list="styleList" oninput="filterSuggestions('search2', 'styleList', 'styleOptions')">
                 <datalist id="styleList">
@@ -87,10 +91,9 @@
                 <!-- Selected options will be displayed here -->
             </div>
         </div>
-
+        
+        <div><p class="red-text description-header">Your calorie preference</p></div>
         <div class="row">
-            <div><img src="../assets/images/calorie.png" alt="Image"></div>
-            <div><p class="red-text">Your calorie preference</p></div>
             <div>
                 <!-- Slider for selecting calorie preference -->
                 <input type="range" id="calorieSlider" min="1" max="3" step="1" oninput="updateCaloriePreference(this.value)" class="white-slider">
@@ -109,11 +112,12 @@
 
         <!-- Button to send data -->
         <div class="button-container">
-            <button class="shiny-button" onclick="sendData()">Send Choices</button>
+            <button class="shiny-button" onclick="sendData()">Make my drink!</button>
         </div>        
     </div>
 
     <script src="../scripts/datalist.js"></script>
 
 </body>
+
 </html>

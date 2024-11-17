@@ -50,12 +50,17 @@
 
   <!-- Centered flashing text message -->
   <p>Redirecting... Please wait...</p>
-s
+
+  <!-- Audio Element -->
+  <audio id="audio" autoplay>
+    <source src="/assets/audio/ROSE & Bruno Mars - APT (mp3cut.net).mp3" type="audio/mp3">
+    Your browser does not support the audio element.
+  </audio>
+
   <script>
-    // After 5 seconds, redirect to recommendation.html
     setTimeout(function() {
       window.location.href = "recommendation.html";
-    }, 1800);
+    }, 3800);
   </script>
 </body>
 </html>
