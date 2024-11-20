@@ -103,6 +103,11 @@ select, input {
     text-align: center; /* Center the text horizontally */
 }
 
+.green-text {
+    color: #82B761;
+    font-weight: bold;
+}
+
 .yellow-text {
     color: #FBBA47;
     font-weight: bold;
