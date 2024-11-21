@@ -1,0 +1,77 @@
+body {
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #262637; /* Set background color to purple */
+    display: flex;
+    justify-content: center; /* Horizontally center content */
+    align-items: center; /* Vertically center content */
+    height: 100vh; /* Full viewport height */
+    text-align: left; /* Left-align text inside elements */
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 20px;
+}
+
+.home-button {
+    text-decoration: none;
+    color: white;
+    background-color: #007BFF;
+    padding: 30px 40px;
+    border-radius: 5px;
+}
+
+main {
+    text-align: center;
+}
+
+@keyframes bomb {
+    0% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.5); opacity: 0.5; }
+    100% { transform: scale(0); opacity: 0; }
+}
+
+.bomb-animation {
+    animation: bomb 0.5s ease-out;
+}
+
+.game-box {
+    background-color: white;
+    padding: 250px;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    font-size: 32px; /* Increased font size */
+    width: 800px;
+    text-align: center; /* Center the text */
+    position: relative; /* Added for positioning */
+    overflow: hidden; /* Added to hide overflow */
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.audio-button {
+    background-color: #CE2F6E;
+    color: white;
+    padding: 50px 280px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.new-game-button {
+    background-color: #2B95A6;
+    color: white;
+    padding: 50px 280px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

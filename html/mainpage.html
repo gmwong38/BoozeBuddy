@@ -32,7 +32,10 @@
         </div>        
         
         <!-- Row 2 to 5 (Repeating Structure) -->
-        <div><p class="green-text description-header">Your alcohol preference</p></div>
+        <div style="text-align: center;">
+            <p class="green-text description-header">Your alcohol preference</p>
+            <span style="display: block; color: #FFFFFF; margin: 0 auto;">(Optional, select as many as you want)</span>
+        </div>
         <div class="row">
             <div>
                 <input type="text" id="search1" placeholder="Search here..." list="alcoholList" oninput="filterSuggestions('search1', 'alcoholList', 'alcoholOptions')">
@@ -86,8 +89,9 @@
                 </div>
             </div>
         </div>
-
+        <div style="text-align: center;">
         <div><p class="blue-text description-header">Your preferred drink style</p></div>
+        <span style="display: block; color: #FFFFFF; margin: 0 auto;">(Optional, select as many as you want)</span>
         <div class="row">
             <div>
                 <input type="text" id="search2" placeholder="Search here..." list="styleList" oninput="filterSuggestions('search2', 'styleList', 'styleOptions')">

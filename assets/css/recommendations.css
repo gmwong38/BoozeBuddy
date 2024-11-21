@@ -44,6 +44,43 @@ h1 {
   background-color: #0056b3;
 }
 
+.button-row {
+  position: fixed;
+  bottom: 50;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content; /* Make it fit its content */
+}
+
+.games-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: rgb(226, 146, 80);
+  color: black;
+  border: 1px solid white;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.games-button:hover {
+  animation-name: flash;
+  animation-duration: 0.5s;
+  animation-timing-function: steps(2);
+  animation-iteration-count: infinite;
+  background-color: yellow;
+}
+
+@keyframes flash {
+  0%, 100% {
+    background-color: yellow;
+  }
+  50% {
+    background-color: black;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
